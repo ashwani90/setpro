@@ -1,0 +1,7 @@
+mongo_db_migrations:
+    collection_name: "migration_versions"
+    database_name: '%env(MONGODB_DB)%'
+    dir_name: "%kernel.root_dir%/../src/Migrations/MongoDB"
+    script_dir_name: "%kernel.root_dir%/scripts"
+    name: "OpenSky DEVO MongoDB Migrations"
+    namespace: "MigrationsMongoDB"
