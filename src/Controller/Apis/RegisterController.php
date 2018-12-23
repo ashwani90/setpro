@@ -18,7 +18,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class RegisterController extends FOSRestController
 {
-    public $expectedValues = array(
+    private $expectedValues = array(
         array ('value' => 'name', 'optional' => false),
         array ('value' => 'email', 'optional' => false),
         array ('value' => 'password', 'optional' => false),
