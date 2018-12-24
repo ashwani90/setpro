@@ -35,135 +35,126 @@ final class ApiRequestConstants
             "expectedValues" => array(
                 'name' => 'Sohel',
                 'email' => 'sohel@gmail.com',
-                'password' => 'sihel',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             )
         ),
         array(
             "params" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
+                'name' => 'Sohel1',
+                'email' => 'sohel1@gmail.com',
                 'password' => 'sihel',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             ),
             "expectedValues" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
-                'password' => 'sihel',
+                'name' => 'Sohel1',
+                'email' => 'sohel1@gmail.com',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             )
         ),
         array(
             "params" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
+                'name' => 'Sohel2',
+                'email' => 'sohel2@gmail.com',
                 'password' => 'sihel',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             ),
             "expectedValues" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
-                'password' => 'sihel',
+                'name' => 'Sohel2',
+                'email' => 'sohel2@gmail.com',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             )
         ),
         array(
             "params" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
+                'name' => 'Sohel3',
+                'email' => 'sohel3@gmail.com',
                 'password' => 'sihel',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             ),
             "expectedValues" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
-                'password' => 'sihel',
+                'name' => 'Sohel3',
+                'email' => 'sohel3@gmail.com',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             )
         ),
         array(
             "params" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
+                'name' => 'Sohel4',
+                'email' => 'sohel4@gmail.com',
                 'password' => 'sihel',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             ),
             "expectedValues" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
-                'password' => 'sihel',
+                'name' => 'Sohel4',
+                'email' => 'sohel4@gmail.com',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             )
         ),
         array(
             "params" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
+                'name' => 'Sohel5',
+                'email' => 'sohel5@gmail.com',
                 'password' => 'sihel',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             ),
             "expectedValues" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
-                'password' => 'sihel',
+                'name' => 'Sohel5',
+                'email' => 'sohel5@gmail.com',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             )
         ),
         array(
             "params" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
+                'name' => 'Sohel6',
+                'email' => 'sohel6@gmail.com',
                 'password' => 'sihel',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             ),
             "expectedValues" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
-                'password' => 'sihel',
+                'name' => 'Sohel6',
+                'email' => 'sohel6@gmail.com',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             )
         ),
         array(
             "params" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
+                'name' => 'Sohel7',
+                'email' => 'sohel7@gmail.com',
                 'password' => 'sihel',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             ),
             "expectedValues" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
-                'password' => 'sihel',
+                'name' => 'Sohel7',
+                'email' => 'sohel7@gmail.com',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             )
         ),
         array(
             "params" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
+                'name' => 'Sohel8',
+                'email' => 'sohel8@gmail.com',
                 'password' => 'sihel',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             ),
             "expectedValues" => array(
-                'name' => 'Sohel',
-                'email' => 'sohel@gmail.com',
-                'password' => 'sihel',
+                'name' => 'Sohel8',
+                'email' => 'sohel8@gmail.com',
                 'phoneNumber' => '8746382938',
                 'address' => 'Nandan Vihar',
             )

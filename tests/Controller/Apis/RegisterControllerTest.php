@@ -5,7 +5,7 @@
  * File to test a register api.
  * Multiple api parameters are passed and test register api.
  *
- * @category Service
+ * @category Controller
  * @author Ashwani
  * @since 0.0.0
  *
@@ -35,18 +35,20 @@ class RegisterControllerTest extends WebTestCase
         $method = GeneralConstants::HTTP_POST_METHOD;
         $hostName = GeneralConstants::HTTP_HOST_NAME;
         $uri = GeneralConstants::REGISTER_API_URL;
+        $params = GeneralConstants::API_PARAMS_NAME;
+        $expectedValues = GeneralConstants::API_EXPECTED_NAME;
 
         $allParameters = ApiRequestConstants::REGISTRATION_PARAMETERS_VALID;
-dump($allParameters);die;
-        foreach ($allParameters as $parameters) {
 
-            $response = $apiTestFramework->apiTestFramework($method, $uri, $parameters, $hostName);
+        foreach ($allParameters as $parameter) {
+
+            $response = $apiTestFramework->apiTestFramework($method, $uri, $parameter[$params], $hostName);
 
             $this->assertEquals(true, $response['success']);
-            $this->assertEquals('Sohel', $response['name']);
-            $this->assertEquals('sohel@gmail.com', $response['email']);
-            $this->assertEquals('8746382938', $response['phoneNumber']);
-            $this->assertEquals('Nandan Vihar', $response['address']);
+            $this->assertEquals($parameter[$expectedValues]['name'], $response['name']);
+            $this->assertEquals($parameter[$expectedValues]['email'], $response['email']);
+            $this->assertEquals($parameter[$expectedValues]['phoneNumber'], $response['phoneNumber']);
+            $this->assertEquals($parameter[$expectedValues]['address'], $response['address']);
         }
     }
 }

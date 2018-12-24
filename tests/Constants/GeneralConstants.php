@@ -53,8 +53,14 @@ final class GeneralConstants
 
     //Api URLs
 
+    /**
+     * Login api uri
+     */
     public const LOGIN_API_URL = '/login';
 
+    /**
+     * Register api uri
+     */
     public const REGISTER_API_URL = '/register';
 
     //Http host url
@@ -63,4 +69,16 @@ final class GeneralConstants
      * Http host name
      */
     public const HTTP_HOST_NAME = 'local.setpro.com';
+
+    //Expected values and params constant
+
+    /**
+     * Name of the index of api params
+     */
+    public const API_PARAMS_NAME = 'params';
+
+    /**
+     * Name of the index of expected api response
+     */
+    public const API_EXPECTED_NAME = 'expectedValues';
 }
