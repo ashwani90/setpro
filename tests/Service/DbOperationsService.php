@@ -14,29 +14,73 @@
 
 namespace App\Tests\Service;
 
+use Doctrine\ODM\MongoDB\DocumentManager;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+
 /**
  * Class to handle db operations.
  * @package App\Tests\Service
  */
-class DbOperationsService
+class DbOperationsService extends WebTestCase
 {
-    protected static $dm;
 
+    /**
+     * @var DocumentManager $dm
+     */
+    protected $dm = null;
+
+    /**
+     * Function to get container
+     *
+     * @return null|\Symfony\Component\DependencyInjection\ContainerInterface
+     */
     private function getContainer()
     {
         $kernel = self::bootKernel();
         return $kernel->getContainer();
     }
 
+    /**
+     * Function to get Document manager
+     *
+     * @return DocumentManager
+     */
     private function getMongodbDoctrine()
     {
         $container = $this->getContainer();
         return $container->get('doctrine_mongodb')->getManager();
     }
 
-    public function deleteDocument()
+    /**
+     * Function to delete a document with given params and class name
+     *
+     * @param $params
+     * @param $className
+     *
+     * @return mixed
+     */
+    public function deleteDocument($params, $className)
     {
-        self::$dm = $this->getMongodbDoctrine();
+        try {
+            //Intially set succes false
+            $result['success'] = false;
 
+            //Get document manager
+            $this->dm = $this->getMongodbDoctrine();
+
+            //Find the required object
+            $object = $this->dm->getRepository($className)->findOneBy($params);
+
+            //Remove the object
+            $this->dm->remove($object);
+            $this->dm->flush();
+
+            //Set success to be true
+            $result['success'] = true;
+        } catch (\Exception $e) {
+            $result['errorMessage'] = $e->getMessage();
+        }
+
+        return $result;
     }
 }
