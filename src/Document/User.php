@@ -11,6 +11,7 @@ namespace App\Document;
 use Doctrine\ODM\MongoDB\Mapping\Annotations\Document;
 use Doctrine\ODM\MongoDB\Mapping\Annotations\Field;
 use Doctrine\ODM\MongoDB\Mapping\Annotations\Id;
+use Doctrine\ODM\MongoDB\Mapping\Annotations\Index;
 use Doctrine\ODM\MongoDB\Mapping\Annotations\PreUpdate;
 use Doctrine\ODM\MongoDB\Mapping\Annotations\PrePersist;
 use Doctrine\ODM\MongoDB\Mapping\Annotations\HasLifecycleCallbacks;
@@ -34,6 +35,7 @@ class User
 
     /**
      * @Field(type="string")
+     * @Index(unique=true, order="asc")
      */
     private $email;
 
@@ -50,15 +52,11 @@ class User
     /**
      * @Field(type="string")
      */
-    private $salt;
-
-    /**
-     * @Field(type="string")
-     */
     private $address;
 
     /**
      * @Field(type="string")
+     * @Index(unique=true, order="asc")
      */
     private $phoneNumber;
 
@@ -138,14 +136,6 @@ class User
         $this->password = password_hash($password, PASSWORD_BCRYPT);
 
         return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSalt()
-    {
-        return $this->salt;
     }
 
     /**
