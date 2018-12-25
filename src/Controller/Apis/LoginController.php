@@ -1,9 +1,12 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mindfire
- * Date: 19/12/18
- * Time: 8:45 PM
+ * Login api
+ *
+ * File contains method to support user sign in into the platform.
+ *
+ * @category   Controller
+ * @author     Ashwani
+ * @since      0.0.0
  */
 
 namespace App\Controller\Apis;
@@ -14,6 +17,10 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * Class for login api.
+ * @package App\Controller\Apis
+ */
 class LoginController extends FOSRestController
 {
     public $expectedValues = array(
@@ -45,15 +52,16 @@ class LoginController extends FOSRestController
             }
 
             //Validation code
+            unset($properties['resultPropertyArray']['password']);
 
             //Set Properties and save data
-            $result = $generalService->getSingleObject($properties['resultPropertyArray'], 'App\Document\User');
+            $resultData = $generalService->getSingleObject($properties['resultPropertyArray'], 'App\Document\User');
 
-            if (!$result['status']) {
-                throw new \Exception('Unable to fetch data.');
+            $result = $resultData['resultObject'];
+
+            if (!$resultData['status'] || !password_verify($request->query->get('password'), $result->getPassword())) {
+                throw new \Exception('Invalid credentials');
             }
-
-            $result = $result['resultObject'];
 
             $returnData['success'] = true;
             $returnData['name'] = $result->getName() ? $result->getName() : '';

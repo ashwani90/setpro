@@ -1,23 +1,31 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mindfire
- * Date: 19/12/18
- * Time: 9:17 PM
+ * Register api
+ *
+ * File contains method to support user sign up into the platform.
+ *
+ * @category   Controller
+ * @author     Ashwani
+ * @since      0.0.0
  */
 
 namespace App\Controller\Apis;
 
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
-use FOS\RestBundle\Controller\Annotations\Post;
-use Hoa\Exception\Exception;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * Class for registration api.
+ * @package App\Controller\Apis
+ */
 class RegisterController extends FOSRestController
 {
+    /**
+     * @var array $expectedValues
+     */
     public $expectedValues = array(
         array ('value' => 'name', 'optional' => false),
         array ('value' => 'email', 'optional' => false),
@@ -54,12 +62,12 @@ class RegisterController extends FOSRestController
             $result = $generalService->setObjectProperties($properties['resultPropertyArray'], 'App\Document\User');
 
             if (!$result['status']) {
+
                 throw new \Exception('Unable to store data.');
             }
 
             $properties['resultPropertyArray'] = array(
                 'email' => $properties['resultPropertyArray']['email'],
-                'password' => $properties['resultPropertyArray']['password']
             );
 
             //Set Properties and save data

@@ -11,9 +11,14 @@ namespace App\Document;
 use Doctrine\ODM\MongoDB\Mapping\Annotations\Document;
 use Doctrine\ODM\MongoDB\Mapping\Annotations\Field;
 use Doctrine\ODM\MongoDB\Mapping\Annotations\Id;
-use Doctrine\ODM\MongoDB\Mapping\Annotations\ReferenceOne;
+use Doctrine\ODM\MongoDB\Mapping\Annotations\PreUpdate;
+use Doctrine\ODM\MongoDB\Mapping\Annotations\PrePersist;
+use Doctrine\ODM\MongoDB\Mapping\Annotations\HasLifecycleCallbacks;
 
-/** @Document(collection="users") */
+/**
+ * @Document(collection="users")
+ * @Document @HasLifecycleCallbacks
+ */
 class User
 {
 
@@ -58,12 +63,12 @@ class User
     private $phoneNumber;
 
     /**
-     * @Field(type="timestamp")
+     * @Field(type="date")
      */
     private $createDate;
 
     /**
-     * @Field(type="timestamp")
+     * @Field(type="date")
      */
     private $lastUpdateDate;
 
@@ -130,7 +135,7 @@ class User
      */
     public function setPassword($password): User
     {
-        $this->password = $password;
+        $this->password = password_hash($password, PASSWORD_BCRYPT);
 
         return $this;
     }
@@ -141,18 +146,6 @@ class User
     public function getSalt()
     {
         return $this->salt;
-    }
-
-    /**
-     * @param string $salt
-     *
-     * @return User
-     */
-    public function setSalt($salt): User
-    {
-        $this->salt = $salt;
-
-        return $this;
     }
 
     /**
@@ -253,5 +246,25 @@ class User
         $this->name = $name;
 
         return $this;
+    }
+
+    /**
+     * @PrePersist()
+     */
+    public function onPrePersist()
+    {
+        $date = new \DateTime();
+        //Store created date when the entity is created
+        $this->createDate = $date;
+    }
+
+    /**
+     * @PreUpdate()
+     */
+    public function onPreUpdate()
+    {
+        //Update last update time when entity updates
+        $date = new \DateTime();
+        $this->lastUpdateDate = $date;
     }
 }
