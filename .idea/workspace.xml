@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36b76d01-e64f-4923-88c3-d93d34bc3cab" name="Default" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/Validations/DataValidator.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Controller/Apis/RegisterControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/Apis/RegisterControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Service/DbOperationsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Service/DbOperationsService.php" afterDir="false" />
+>>>>>>> unit-testing-implementation
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,6 +22,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="DataValidator.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Validations/DataValidator.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -33,6 +40,22 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="20" />
+=======
+      <file leaf-file-name="LoginControllerTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Controller/Apis/LoginControllerTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DbOperationsService.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/Service/DbOperationsService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+>>>>>>> unit-testing-implementation
             </state>
           </provider>
         </entry>
@@ -67,11 +90,24 @@
         <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/var/log/dev.log" />
         <option value="$PROJECT_DIR$/src/Service/GeneralService.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Controller/Apis/RegisterController.php" />
         <option value="$PROJECT_DIR$/src/Controller/Apis/LoginController.php" />
         <option value="$PROJECT_DIR$/src/Document/User.php" />
         <option value="$PROJECT_DIR$/src/Validations/DataValidator.php" />
+=======
+        <option value="$PROJECT_DIR$/src/Controller/Apis/LoginController.php" />
+        <option value="$PROJECT_DIR$/tests/Service/GeneralServiceTest.php" />
+        <option value="$PROJECT_DIR$/src/Controller/Apis/RegisterController.php" />
+        <option value="$PROJECT_DIR$/tests/Controller/Apis/LoginControllerTest.php" />
+        <option value="$PROJECT_DIR$/tests/Service/ApiTestFrameworkServiceTest.php" />
+        <option value="$PROJECT_DIR$/.env.test" />
+        <option value="$PROJECT_DIR$/tests/Constants/GeneralConstants.php" />
+        <option value="$PROJECT_DIR$/tests/Constants/ApiRequestConstants.php" />
+        <option value="$PROJECT_DIR$/tests/Controller/Apis/RegisterControllerTest.php" />
+        <option value="$PROJECT_DIR$/tests/Service/DbOperationsService.php" />
+>>>>>>> unit-testing-implementation
       </list>
     </option>
   </component>
@@ -84,6 +120,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
@@ -242,23 +279,59 @@
             <path>
               <item name="setpro" type="b2602c69:ProjectViewProjectNode" />
               <item name="setpro" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="bin" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+>>>>>>> unit-testing-implementation
             </path>
             <path>
               <item name="setpro" type="b2602c69:ProjectViewProjectNode" />
               <item name="setpro" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="Document" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="setpro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="setpro" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="setpro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="setpro" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Constants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="setpro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="setpro" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="setpro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="setpro" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+              <item name="Apis" type="462c0819:PsiDirectoryNode" />
+>>>>>>> unit-testing-implementation
+            </path>
+            <path>
+              <item name="setpro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="setpro" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+>>>>>>> unit-testing-implementation
             </path>
             <path>
               <item name="setpro" type="b2602c69:ProjectViewProjectNode" />
               <item name="setpro" type="462c0819:PsiDirectoryNode" />
               <item name="var" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="setpro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="setpro" type="462c0819:PsiDirectoryNode" />
-              <item name="var" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -297,11 +370,15 @@
       <workItem from="1545058006691" duration="2312000" />
       <workItem from="1545137282097" duration="4971000" />
       <workItem from="1545196737225" duration="34745000" />
-      <workItem from="1545309318283" duration="6699000" />
+      <workItem from="1545309318283" duration="24395000" />
+      <workItem from="1545477531072" duration="15952000" />
+      <workItem from="1545635639605" duration="1838000" />
+      <workItem from="1545648099084" duration="3935000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="58991000" />
   </component>
   <component name="ToolWindowManager">
@@ -314,10 +391,38 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27965435" />
+=======
+    <option name="totallyTimeSpent" value="88148000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="46" y="-11" width="1321" height="780" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27965435" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32954547" />
+>>>>>>> unit-testing-implementation
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32792208" />
       <window_info anchor="right" id="Database" order="3" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Find" order="1" weight="0.32792208" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+=======
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+>>>>>>> unit-testing-implementation
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Thumbnails" order="8" weight="0.32954547" />
@@ -336,9 +441,13 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32847896" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
+=======
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32847896" />
+>>>>>>> unit-testing-implementation
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -370,10 +479,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/tests/Service/GeneralServiceTest.php" />
     <entry file="file://$PROJECT_DIR$/src/Controller/HelloController.php" />
     <entry file="file://$PROJECT_DIR$/src/Controller/Apis/LoginController.php">
@@ -407,13 +517,12 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> unit-testing-implementation
     <entry file="file://$PROJECT_DIR$/src/Document/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-          <folding>
-            <element signature="e#117#171#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -473,7 +582,6 @@
     <entry file="file://$PROJECT_DIR$/composer.lock">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env.test" />
     <entry file="file://$PROJECT_DIR$/bootstrap.php" />
     <entry file="file://$PROJECT_DIR$/src/Document/Product.php" />
     <entry file="file://$PROJECT_DIR$/composer.json">
@@ -483,6 +591,16 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/Document/UserType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> unit-testing-implementation
     <entry file="file://$PROJECT_DIR$/config/packages/dev/routing.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -592,6 +710,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -605,10 +724,54 @@
           <caret line="63" column="45" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
           <folding>
             <element signature="e#118#159#0#PHP" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/Service/GeneralService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="79" column="46" lean-forward="true" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Apis/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="49" column="77" selection-start-line="49" selection-start-column="77" selection-end-line="49" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/framework-bundle/Test/WebTestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Apis/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+          <folding>
+            <element signature="e#124#174#0#PHP" expanded="true" />
+>>>>>>> unit-testing-implementation
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -630,23 +793,53 @@
           <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
           <folding>
             <element signature="e#117#171#0#PHP" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/tests/Constants/GeneralConstants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Service/ApiTestFrameworkServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding>
+            <element signature="e#6#275#0#PHP" expanded="true" />
+>>>>>>> unit-testing-implementation
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Apis/RegisterController.php">
+    <entry file="file://$PROJECT_DIR$/src/Document/User.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="330">
           <caret line="22" column="3" selection-start-line="19" selection-end-line="22" selection-end-column="3" />
           <folding>
             <element signature="e#6#29#0#PHP" expanded="true" />
             <element signature="e#124#174#0#PHP" expanded="true" />
+=======
+        <state relative-caret-position="45">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Constants/ApiRequestConstants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="e#6#305#0#PHP" expanded="true" />
+>>>>>>> unit-testing-implementation
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Apis/LoginController.php">
+    <entry file="file://$PROJECT_DIR$/tests/Service/GeneralServiceTest.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="20" />
         </state>
@@ -658,7 +851,35 @@
           <caret line="183" column="44" selection-start-line="183" selection-start-column="44" selection-end-line="183" selection-end-column="44" />
           <folding>
             <element signature="e#6#183#0#PHP" expanded="true" />
+=======
+        <state relative-caret-position="300">
+          <caret line="74" column="74" selection-start-line="74" selection-start-column="74" selection-end-line="74" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Controller/Apis/RegisterControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="65" column="1" lean-forward="true" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#207#0#PHP" expanded="true" />
+            <element signature="e#247#289#0#PHP" expanded="true" />
+>>>>>>> unit-testing-implementation
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Controller/Apis/LoginControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Service/DbOperationsService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
         </state>
       </provider>
     </entry>
