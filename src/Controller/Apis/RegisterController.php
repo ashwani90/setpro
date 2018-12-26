@@ -11,6 +11,7 @@
 
 namespace App\Controller\Apis;
 
+use App\Validations\DataValidator;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
 use Psr\Log\LoggerInterface;
@@ -19,6 +20,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class for registration api.
+ * @category Controller
  * @package App\Controller\Apis
  */
 class RegisterController extends FOSRestController
@@ -56,7 +58,18 @@ class RegisterController extends FOSRestController
                 throw new \Exception('Some argument missing');
             }
 
-            //Validation code
+            $hasError = DataValidator::validate($properties['resultPropertyArray'],
+                array('name' => 'required | max:105',
+                    'email' => 'required | max:105',
+                    'password' => 'required',
+                    'phoneNumber' => 'required | digits:10',
+                    'address' => 'required'
+                )
+            )->fails();
+
+            if ($hasError) {
+                throw new \Exception('Data is not valid');
+            }
 
             //Set Properties and save data
             $result = $generalService->setObjectProperties($properties['resultPropertyArray'], 'App\Document\User');

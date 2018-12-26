@@ -1,0 +1,11 @@
+# translations/messages.fr.yaml
+validation_messages:
+    required: This field is required.
+    string: This field needs type as string.
+    numeric: This field needs type as numeric.
+    max: The length of this field is greater than the specified length.
+    min: The length of this field is greater than the specified length.
+    digits: This field has invalid format.
+    incorrect_min_value: The max value is incorrect
+    incorrect_max_value: The min value is incorrect
+    incorrect_digits_value: The digits length value is incorrect

@@ -11,6 +11,9 @@
 
 namespace App\Validations;
 
+use App\Constants\ValidationConstants;
+use Symfony\Bundle\FrameworkBundle\Translation\Translator;
+
 /**
  * Class to support validation of the data
  * @package App\Validations
@@ -67,6 +70,10 @@ class DataValidator
         // Create it if it doesn't exist.
         $validator = self::getInstance();
 
+        //Create an instance of the translator
+        global $kernel;
+        $translator = $kernel->getContainer()->get('translator');
+
         $errors = [];
 
         //Loop through all of the provided rules
@@ -80,83 +87,71 @@ class DataValidator
                 if (!empty($r) && !isset($validator::$errors[$k])) {
 
                     switch ($r) {
-                        case 'required':
+                        case ValidationConstants::CONSTRAINT_REQUIRED:
                             //Check the data to not be empty
-                            if (!(isset($data[$k]) && !empty($data[$k]))) {
-                                $validator::$hasError = true;
-                                $validator::$errors[$k] = (isset($messages[$k . 'required'])) ?
-                                    $messages[$k . 'required'] : 'This field is required.';
-                            }
+                            (!(isset($data[$k]) && !empty($data[$k])))
+                            && ($validator::$errors[$k] = self::getErrorMessage($k, $messages, ValidationConstants::CONSTRAINT_REQUIRED, $translator));
+
                             break;
 
-                        case 'string':
+                        case ValidationConstants::CONSTRAINT_STRING:
                             //Check for type string
-                            if (!is_string($data[$k])) {
-                                $validator::$hasError = true;
-                                $validator::$errors[$k] = (isset($messages[$k . 'string'])) ?
-                                    $messages[$k . 'string'] : 'This field must be string.';
-                            }
+                            (!is_string($data[$k]))
+                                && ($validator::$errors[$k] = self::getErrorMessage($k, $messages, ValidationConstants::CONSTRAINT_STRING, $translator));
+
                             break;
 
-                        case 'numeric':
+                        case ValidationConstants::CONSTRAINT_NUMERIC:
                             //Check for type numeric
-                            if (!is_numeric($data[$k])) {
-                                $validator::$hasError = true;
-                                $validator::$errors[$k] = (isset($messages[$k . 'numeric'])) ?
-                                    $messages[$k . 'numeric'] : 'The field under validation must be numeric.';
-                            }
+                            (!is_numeric($data[$k]))
+                                && ($validator::$errors[$k] = self::getErrorMessage($k, $messages, ValidationConstants::CONSTRAINT_NUMERIC, $translator));
+
                             break;
 
-                        case ((strpos($r, 'max') !== false) ? $r : false):
+                        case ((strpos($r, ValidationConstants::CONSTRAINT_MAX) !== false) ? $r : false):
 
                             $sr = explode(':', $r);
                             $ml = (int)end($sr);
 
                             //Check for valid length
                             if ($ml < 0) {
-                                throw new \Exception('The max value is incorrect');
+                                throw new \Exception($translator->trans(ValidationConstants::INCORRECT_MAX_VALUE));
                             }
 
                             //Check for maximum length of the string
-                            if (strlen($data[$k]) > $ml) {
-                                $validator::$hasError = true;
-                                $validator::$errors[$k] = (isset($messages[$k . 'max'])) ?
-                                    $messages[$k . 'max'] : 'The length of the field must be less than ' . $ml . '.';
-                            }
+                            (strlen($data[$k]) > $ml)
+                            && ($validator::$errors[$k] = self::getErrorMessage($k, $messages, ValidationConstants::CONSTRAINT_MAX, $translator));
+
                             break;
 
-                        case ((strpos($r, 'min') !== false) ? $r : false):
+                        case ((strpos($r, ValidationConstants::CONSTRAINT_MIN) !== false) ? $r : false):
                             $sr = explode(':', $r);
                             $ml = (int)end($sr);
 
                             //Check for valid length value
                             if ($ml < 0) {
-                                throw new \Exception('The min value is incorrect');
+                                throw new \Exception($translator->trans(ValidationConstants::INCORRECT_MIN_VALUE));
                             }
 
                             //Check for minimum length
-                            if (strlen($data[$k]) < $ml) {
-                                $validator::$hasError = true;
-                                $validator::$errors[$k] = (isset($messages[$k . 'min'])) ?
-                                    $messages[$k . 'max'] : 'The length of the field must be greater than ' . $ml . '.';
-                            }
+                            (strlen($data[$k]) < $ml)
+                                && ($validator::$errors[$k] = self::getErrorMessage($k, $messages, ValidationConstants::CONSTRAINT_MIN, $translator));
+
                             break;
 
-                        case ((strpos($r, 'digits') !== false) ? $r : false):
+                        case ((strpos($r, ValidationConstants::CONSTRAINT_DIGITS) !== false) ? $r : false):
                             $sr = explode(':', $r);
                             $ml = (int)end($sr);
 
                             //Check for valid length of digits
                             if ($ml < 0) {
-                                throw new \Exception('The digits length value is incorrect');
+                                throw new \Exception($translator->trans(ValidationConstants::INCORRECT_DIGITS_VALUE));
                             }
 
                             //Check for value to be number and also not contain decimal part
-                            if (!is_numeric($data[$k]) || strlen((int)$data[$k]) !== $ml) {
-                                $validator::$hasError = true;
-                                $validator::$errors[$k] = (isset($messages[$k . 'digits'])) ?
-                                    $messages[$k . 'digits'] : 'The length of the field must be numeric and equal to ' . $ml . '.';
-                            }
+                            (!is_numeric($data[$k]) || strlen((int)$data[$k]) !== $ml)
+                                && ($validator::$errors[$k] = self::getErrorMessage($k, $messages, ValidationConstants::CONSTRAINT_DIGITS, $translator));
+
                             break;
 
                     }
@@ -176,7 +171,6 @@ class DataValidator
      */
     public function fails()
     {
-
         return self::$hasError;
     }
 
@@ -188,5 +182,22 @@ class DataValidator
     public function validationErrors()
     {
         return self::$errors;
+    }
+
+    /**
+     * Function to return error message based on validation type
+     *
+     * @param string $key
+     * @param array $messages
+     * @param string $validationConstant
+     * @param Translator $translator
+     *
+     * @return string
+     */
+    public function getErrorMessage($key, $messages, $validationConstant, $translator)
+    {
+        return (isset($messages[$key . '.' . $validationConstant]))
+                    ? $messages[$key . '.' . $validationConstant]
+                    : $translator->trans($validationConstant);
     }
 }

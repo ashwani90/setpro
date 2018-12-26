@@ -16,6 +16,7 @@ use FOS\RestBundle\Controller\FOSRestController;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use App\Validations\DataValidator;
 
 /**
  * Class for login api.
@@ -49,6 +50,16 @@ class LoginController extends FOSRestController
             //Throw exception if some argument is missing
             if (!$properties['status']) {
                 throw new \Exception('Some argument missing');
+            }
+
+            $hasError = DataValidator::validate($properties['resultPropertyArray'],
+                array('email' => 'required | max:105',
+                      'password' => 'required'
+                    )
+                )->fails();
+
+            if ($hasError) {
+                throw new \Exception('Data is not valid');
             }
 
             //Validation code

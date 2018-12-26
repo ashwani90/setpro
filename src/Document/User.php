@@ -1,9 +1,12 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: mindfire
- * Date: 19/12/18
- * Time: 5:06 PM
+ * Document User
+ *
+ * This file contains the structure of the User object that will stored in the database.
+ *
+ * @category   Document
+ * @author     Ashwani
+ * @since      0.0.0
  */
 
 namespace App\Document;
@@ -17,6 +20,9 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations\PrePersist;
 use Doctrine\ODM\MongoDB\Mapping\Annotations\HasLifecycleCallbacks;
 
 /**
+ * Class Document User
+ * @package App\Document
+ *
  * @Document(collection="users")
  * @Document @HasLifecycleCallbacks
  */
